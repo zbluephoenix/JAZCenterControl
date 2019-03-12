@@ -7,17 +7,40 @@
 //
 
 #import "ViewController.h"
+#import "JAZCenterControl.h"
 
-@interface ViewController ()
+#define ViewControllerDebugLog NSLog(@"%@, %@", self, NSStringFromSelector(_cmd))
+@interface ViewController () <JAZCenterControlDelegate>
 
 @end
 
 @implementation ViewController
 
+- (void)dealloc
+{
+    ViewControllerDebugLog;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    ViewControllerDebugLog;
+    
+    [JAZCenterControl addObserver:self type:JAZCenterControlType_appWillEnterForeground];
+    [JAZCenterControl addObserver:self type:JAZCenterControlType_appDidBecomeActive block:^(JAZCenterControlType type) {
+        NSLog(@"didBecomeActive  = %lu", type);
+    }];
+    
+    [JAZCenterControl addObserver:self type:JAZCenterControlType_appWillResignActive block:^(JAZCenterControlType type) {
+        NSLog(@"willResignActive = %lu", type);
+    }];
+    [JAZCenterControl addObserver:self type:JAZCenterControlType_appDidEnterBackground];
 }
 
+- (void)jazCenterControlActionWithType:(JAZCenterControlType)type
+{
+    NSLog(@"jazCenterControlActionWithType = %lu", type);
+    
+}
 
 @end

@@ -13,6 +13,9 @@
 		045B72D822378675006E8EE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 045B72D722378675006E8EE2 /* Assets.xcassets */; };
 		045B72DB22378675006E8EE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045B72D922378675006E8EE2 /* LaunchScreen.storyboard */; };
 		045B72DE22378675006E8EE2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B72DD22378675006E8EE2 /* main.m */; };
+		045B72E7223786C6006E8EE2 /* JAZCenterControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B72E6223786C6006E8EE2 /* JAZCenterControl.m */; };
+		045B72EA2237875C006E8EE2 /* NSObject+JAZCenterControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B72E92237875C006E8EE2 /* NSObject+JAZCenterControl.m */; };
+		045B72EE22379991006E8EE2 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045B72ED22379991006E8EE2 /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,13 @@
 		045B72DA22378675006E8EE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		045B72DC22378675006E8EE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		045B72DD22378675006E8EE2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		045B72E5223786C6006E8EE2 /* JAZCenterControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JAZCenterControl.h; sourceTree = "<group>"; };
+		045B72E6223786C6006E8EE2 /* JAZCenterControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JAZCenterControl.m; sourceTree = "<group>"; };
+		045B72E82237875C006E8EE2 /* NSObject+JAZCenterControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+JAZCenterControl.h"; sourceTree = "<group>"; };
+		045B72E92237875C006E8EE2 /* NSObject+JAZCenterControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JAZCenterControl.m"; sourceTree = "<group>"; };
+		045B72EB2237907E006E8EE2 /* JAZCenterControlConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JAZCenterControlConstant.h; sourceTree = "<group>"; };
+		045B72EC22379991006E8EE2 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		045B72ED22379991006E8EE2 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,15 +68,30 @@
 		045B72CD22378673006E8EE2 /* JAZCenterControl */ = {
 			isa = PBXGroup;
 			children = (
+				045B72E422378687006E8EE2 /* JAZCenterControl */,
 				045B72CE22378673006E8EE2 /* AppDelegate.h */,
 				045B72CF22378673006E8EE2 /* AppDelegate.m */,
 				045B72D122378673006E8EE2 /* ViewController.h */,
 				045B72D222378673006E8EE2 /* ViewController.m */,
+				045B72EC22379991006E8EE2 /* MainViewController.h */,
+				045B72ED22379991006E8EE2 /* MainViewController.m */,
 				045B72D422378673006E8EE2 /* Main.storyboard */,
 				045B72D722378675006E8EE2 /* Assets.xcassets */,
 				045B72D922378675006E8EE2 /* LaunchScreen.storyboard */,
 				045B72DC22378675006E8EE2 /* Info.plist */,
 				045B72DD22378675006E8EE2 /* main.m */,
+			);
+			path = JAZCenterControl;
+			sourceTree = "<group>";
+		};
+		045B72E422378687006E8EE2 /* JAZCenterControl */ = {
+			isa = PBXGroup;
+			children = (
+				045B72E5223786C6006E8EE2 /* JAZCenterControl.h */,
+				045B72E6223786C6006E8EE2 /* JAZCenterControl.m */,
+				045B72E82237875C006E8EE2 /* NSObject+JAZCenterControl.h */,
+				045B72E92237875C006E8EE2 /* NSObject+JAZCenterControl.m */,
+				045B72EB2237907E006E8EE2 /* JAZCenterControlConstant.h */,
 			);
 			path = JAZCenterControl;
 			sourceTree = "<group>";
@@ -141,9 +166,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045B72E7223786C6006E8EE2 /* JAZCenterControl.m in Sources */,
+				045B72EE22379991006E8EE2 /* MainViewController.m in Sources */,
 				045B72D322378673006E8EE2 /* ViewController.m in Sources */,
 				045B72DE22378675006E8EE2 /* main.m in Sources */,
 				045B72D022378673006E8EE2 /* AppDelegate.m in Sources */,
+				045B72EA2237875C006E8EE2 /* NSObject+JAZCenterControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
